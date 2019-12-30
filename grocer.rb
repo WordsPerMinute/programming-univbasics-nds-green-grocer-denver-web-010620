@@ -28,8 +28,6 @@ def consolidate_cart(cart)
           count: 1
         }
 
-        newArray << cart[i]
-        newArray[i][:count] = 1
       end
       i += 1
     end
