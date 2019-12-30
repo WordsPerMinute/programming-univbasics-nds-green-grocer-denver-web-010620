@@ -21,6 +21,13 @@ def consolidate_cart(cart)
         itemToAdd[:count] += 1
         newArray << itemToAdd
       else
+        new_cart_item = {
+          item: cart[i][:item],
+          price: cart[i][:key],
+          clearance: cart[i][:clearance],
+          count: 1
+        }
+
         newArray << cart[i]
         newArray[i][:count] = 1
       end
