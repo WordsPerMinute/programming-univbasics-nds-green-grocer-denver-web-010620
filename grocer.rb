@@ -22,7 +22,7 @@ def consolidate_cart(cart)
       else
         new_cart_item = {
           item: cart[i][:item],
-          price: cart[i][:key],
+          price: cart[i][:price],
           clearance: cart[i][:clearance],
           count: 1
         }
