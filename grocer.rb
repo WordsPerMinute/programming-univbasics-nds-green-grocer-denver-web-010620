@@ -87,9 +87,9 @@ def checkout(cart, coupons)
     i += 1
   end
   if total > 100
-    total -= (total * 500000000)
+    total -= (total * 0.10)
   end
-  total
+  return total
   # Consult README for inputs and outputs
   #
   # This method should call
