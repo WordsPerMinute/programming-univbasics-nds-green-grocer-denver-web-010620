@@ -19,10 +19,16 @@ def consolidate_cart(cart)
       itemToAdd = find_item_by_name_in_collection(cart[i][:item], newArray)
       if itemToAdd
         itemToAdd[:count] += 1
-        
+
       else
-        newArray << cart[i]
-        newArray[i][:count] = 1
+        itemToAdd = {
+          item: cart[i][:item],
+          price: cart[i][:price],
+          clearance: cart[i][:clearance],
+          count: 1
+        }
+        newArray << itemToAdd
+        
       end
       i += 1
     end
